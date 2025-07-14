@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvHomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skin Health Scanner"
+            android:textSize="24sp"
+            android.textStyle="bold"
+            android:textColor="#673AB7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Camera Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenCamera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="📷 Open Camera"
+            app:cornerRadius="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Gallery Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChooseImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="🖼 Choose from Gallery"
+            app:cornerRadius="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnOpenCamera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Image Preview -->
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="24dp"
+            android.scaleType="centerCrop"
+            android:background="@drawable/image_preview_background"
+            android:contentDescription="Image Preview"
+            app:layout_constraintTop_toBottomOf="@id/btnChooseImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Diagnosis Result -->
+        <TextView
+            android:id="@+id/textDiagnosis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="📱 Take or select a photo to start AI analysis
+
+🔬 Our trained model will analyze your skin condition
+
+⚡ Get instant results with confidence scores"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/rounded_background"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/imagePreview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Navigation Buttons -->
+        <LinearLayout
+            android:id="@+id/navigation_buttons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/textDiagnosis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="💬 Chat"
+                android:layout_marginEnd="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDoctors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="👨‍⚕️ Doctors"
+                android:layout_marginStart="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+        <!-- Debug Test Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTestNetwork"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="🔧 Test Network"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/navigation_buttons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDirectTest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="DIRECT CONNECTION TEST"
+            android:layout_marginTop="16dp"
+            android.backgroundTint="#FF0000"
+            android:textColor="#FFFFFF"
+            style="@style/Widget.MaterialComponents.Button"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnTestNetwork"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Bottom spacing -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toBottomOf="@id/btnDirectTest" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

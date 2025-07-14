@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">SkinVision</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_title">Welcome to SkinVision</string>
+    <string name="welcome_subtitle">AI-powered skin condition analysis at your fingertips</string>
+    <string name="get_started">Get Started</string>
+    <string name="create_account">Create Account</string>
+
+    <!-- Authentication -->
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="dont_have_account">Don\'t have an account? Sign Up</string>
+
+    <!-- Home Screen -->
+    <string name="home_title">Skin Health Scanner</string>
+    <string name="open_camera">📷 Open Camera</string>
+    <string name="choose_from_gallery">🖼 Choose from Gallery</string>
+    <string name="initial_message">📱 Take or select a photo to start AI analysis\n\n🔬 Our trained model will analyze your skin condition\n\n⚡ Get instant results with confidence scores</string>
+
+    <!-- Navigation -->
+    <string name="doctors">Doctors</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
+    <string name="schedule">Schedule</string>
+    <string name="history">History</string>
+    <string name="settings">Settings</string>
+    <string name="help_center">Help Center</string>
+    <string name="edit_profile">Edit Profile</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="loading">Loading...</string>
+</resources>

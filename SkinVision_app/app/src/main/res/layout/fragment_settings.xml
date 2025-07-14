@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/textColorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_back" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Notifications Section -->
+        <TextView
+            android:id="@+id/tvNotificationsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/header_layout"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notificationSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvNotificationsHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvPushNotifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Push Notifications"
+                android:textSize="16sp"
+                android:textColor="@color/textColorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/switchPushNotifications" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchPushNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEmailNotifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Email Notifications"
+                android:textSize="16sp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvPushNotifications"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/switchEmailNotifications" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchEmailNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/switchPushNotifications"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Privacy Section -->
+        <TextView
+            android:id="@+id/tvPrivacyHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy &amp; Security"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/notificationSettings"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/privacySettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPrivacyHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvDataCollection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Allow Data Collection for AI Improvement"
+                android:textSize="16sp"
+                android:textColor="@color/textColorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/switchDataCollection" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchDataCollection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChangePassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvDataCollection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- App Preferences -->
+        <TextView
+            android:id="@+id/tvAppHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App Preferences"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/privacySettings"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/appSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvAppHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvDarkMode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Dark Mode"
+                android:textSize="16sp"
+                android:textColor="@color/textColorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/switchDarkMode" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClearCache"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Clear Cache"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvDarkMode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetPreferences"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Reset to Default"
+                android:layout_marginTop="12dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@id/btnClearCache"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- App Info -->
+        <TextView
+            android:id="@+id/tvAppInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SkinVision v1.0.0&#10;© 2024 SkinVision Technologies"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:textAlignment="center"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintTop_toBottomOf="@id/appSettings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

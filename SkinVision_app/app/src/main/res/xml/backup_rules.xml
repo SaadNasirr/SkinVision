@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample backup rules file; uncomment and customize as necessary.
+   See https://developer.android.com/guide/topics/data/autobackup
+   for details.
+   Note: This file is ignored for devices older that API 23 even if they have auto backup
+   enabled in Manifest.
+-->
+<full-backup-content>
+    <!-- Exclude specific shared preferences that contain GCM registration Id -->
+</full-backup-content>
